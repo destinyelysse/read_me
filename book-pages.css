@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Roboto:wght@100&display=swap");
+
+* {
+  font-family: "Inconsolata";
+}
+
+p {
+  font-size: 1.5rem;
+  color: blue;
+}
+
+li {
+  font-size: 1rem;
+  color: purple;
+}
