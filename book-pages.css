@@ -4,12 +4,66 @@
   font-family: "Inconsolata";
 }
 
+:root {
+  --bg-color: #242526;
+  --primary-text-color: #7de7f5;
+}
+
+html {
+  background-color: var(--bg-color);
+}
+
+/* BOOK PAGE */
+
+.book-info {
+  display: flex;
+  border: 3px solid red;
+}
+
+.title-block {
+  border: 2px solid yellow;
+}
+
+.book-view-title {
+  font-size: 3rem;
+  color: var(--primary-text-color);
+}
+
+.book-view-tagline {
+  color: var(--primary-text-color);
+}
+
+.book-view-author {
+  color: var(--primary-text-color);
+}
+
+.copyright-date {
+  color: var(--primary-text-color);
+}
+
+aside {
+  max-width: 25%;
+  border: 2px solid green;
+}
+
+article {
+  border: 2px solid pink;
+}
+
 p {
   font-size: 1.5rem;
-  color: blue;
+  color: cornflowerblue;
+}
+
+a {
+  color: rebeccapurple;
 }
 
 li {
   font-size: 1rem;
-  color: purple;
+  color: lightgreen;
+}
+
+.book {
+  background-color: cyan;
 }
