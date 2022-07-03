@@ -1,69 +1,251 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Roboto:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pompiere&display=swap");
 
 * {
-  font-family: "Inconsolata";
+  font-family: "Pompiere";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-  --bg-color: #242526;
-  --primary-text-color: #7de7f5;
+  --bg-color: #39393f;
+  --primary-text-color: #ebebeb;
+  --primary-font: "Pompiere";
 }
 
 html {
   background-color: var(--bg-color);
 }
 
-/* BOOK PAGE */
-
-.book-info {
+/* HOME PAGE */
+.home-header {
+  padding-top: 2rem;
   display: flex;
-  border: 3px solid red;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
-.title-block {
-  border: 2px solid yellow;
+.site-title {
+  color: var(--primary-text-color);
+  font-size: 5rem;
+}
+
+.shelf {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.shelf-label {
+  margin: 1.5rem;
+  color: var(--primary-text-color);
+  font-size: 4rem;
+}
+
+.shelf-books {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.book-tile {
+  width: 15rem;
+  height: 15rem;
+  margin: 1.5rem;
+  padding: 1rem;
+  border: 3px solid var(--primary-text-color);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--bg-color);
+  color: var(--primary-text-color);
+  font-family: var(--primary-font);
+  text-decoration: none;
+}
+
+.book-tile-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.book-tile-author {
+  font-size: 1.25rem;
+}
+
+/* BOOK PAGE */
+.book-view {
+  display: flex;
+  justify-content: center;
+}
+
+.book-info {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.back-link-container {
+  margin: 1rem;
+  display: block;
+}
+
+.back-to-shelf {
+  display: inline;
+  color: var(--primary-text-color);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+/* book tile */
+
+.book-view-tile {
+  max-width: 40vw;
+  margin: 1rem;
+  padding: 1rem;
+  border: 3px solid white;
+  border-radius: 7px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
 .book-view-title {
-  font-size: 3rem;
+  margin: 1rem 0 0 0;
   color: var(--primary-text-color);
+  font-size: 4rem;
+  font-family: var(--primary-font);
 }
 
 .book-view-tagline {
+  margin: 1.5rem 0 0 0;
+  flex-grow: 90%;
   color: var(--primary-text-color);
+  font-size: 2.5rem;
+  font-family: var(--primary-font);
 }
 
 .book-view-author {
+  margin: 2rem 0 1rem 0;
   color: var(--primary-text-color);
+  font-size: 3rem;
 }
 
-.copyright-date {
+/* buy it button */
+
+.buy-it-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.buy-it-button {
+  margin: 2rem;
+  padding: 0.75rem;
+  border: 1px solid var(--primary-text-color);
+  border-radius: 7px;
+  background: var(--primary-text-color);
+  color: var(--bg-color);
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+/* basic info */
+
+.summary {
+  margin: 2rem;
+  padding: 0;
+  font-size: 2rem;
   color: var(--primary-text-color);
+  text-align: center;
 }
 
-aside {
-  max-width: 25%;
-  border: 2px solid green;
+.section-author {
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
-article {
-  border: 2px solid pink;
+.section-label {
+  margin: 1rem;
+  color: var(--primary-text-color);
+  font-size: 2.5rem;
 }
 
-p {
-  font-size: 1.5rem;
-  color: cornflowerblue;
+.author-text {
+  margin: 1rem;
+  color: var(--primary-text-color);
+  font-size: 2rem;
+  text-align: center;
 }
 
-a {
-  color: rebeccapurple;
+/* favorite ideas */
+
+.section-favorite-ideas {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
 }
 
-li {
-  font-size: 1rem;
-  color: lightgreen;
+.ideas {
+  margin: 1rem;
+  padding: 2rem;
 }
 
-.book {
-  background-color: cyan;
+.ideas li {
+  margin: 0 0 2rem 0;
+  color: var(--primary-text-color);
+  font-size: 2rem;
+}
+
+.ideas ul {
+  margin-left: 2rem;
+  padding-top: 2rem;
+}
+
+/* explore links */
+
+.section-explore {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.explore-links-container {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.explore-link {
+  padding: 0.5rem;
+  margin: 1rem;
+  border: 1px solid var(--primary-text-color);
+  border-radius: 7px;
+  background: var(--primary-text-color);
+  color: var(--bg-color);
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+/* another buy it button */
+
+.buy-it-note {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.end-text {
+  color: var(--primary-text-color);
+  font-size: 2rem;
+  text-align: center;
 }
