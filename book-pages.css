@@ -12,8 +12,8 @@
 }
 
 :root {
-  --bg-color: #39393f;
-  --primary-text-color: #ebebeb;
+  --bg-color: #242526;
+  --primary-text-color: #add8e6;
   --primary-font: "Kantumruy Pro";
 }
 
@@ -61,17 +61,18 @@ html {
   border-radius: 7px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  background-color: var(--bg-color);
-  color: var(--primary-text-color);
+  background-color: var(--primary-text-color);
+  color: var(--bg-color);
   font-family: var(--primary-font);
   text-decoration: none;
+  hyphens: manual;
 }
 
 .book-tile-title {
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .book-tile-author {
