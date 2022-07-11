@@ -2,9 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pompiere&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro&display=swap");
 
 * {
-  font-family: "Pompiere";
+  font-family: "Kantumruy Pro";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -13,7 +14,7 @@
 :root {
   --bg-color: #39393f;
   --primary-text-color: #ebebeb;
-  --primary-font: "Pompiere";
+  --primary-font: "Kantumruy Pro";
 }
 
 html {
