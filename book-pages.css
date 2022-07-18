@@ -30,8 +30,10 @@ html {
 }
 
 .site-title {
+  margin: 1rem;
   color: var(--primary-text-color);
   font-size: 5rem;
+  text-align: center;
 }
 
 .shelf {
@@ -45,11 +47,23 @@ html {
   margin: 1.5rem;
   color: var(--primary-text-color);
   font-size: 4rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .site-title {
+    font-size: 4rem;
+  }
+
+  .shelf-label {
+    font-size: 3rem;
+  }
 }
 
 .shelf-books {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .book-tile {
@@ -108,22 +122,17 @@ html {
 /* book tile */
 
 .book-view-tile {
-  max-width: 40vw;
-  margin: 1rem;
-  padding: 1rem;
-  border: 3px solid white;
-  border-radius: 7px;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .book-view-title {
   margin: 1rem 0 0 0;
   color: var(--primary-text-color);
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-family: var(--primary-font);
-  text-align: center;
+  text-align: start;
 }
 
 .book-view-tagline {
@@ -132,14 +141,14 @@ html {
   color: var(--primary-text-color);
   font-size: 2.5rem;
   font-family: var(--primary-font);
-  text-align: center;
+  text-align: start;
 }
 
 .book-view-author {
   margin: 2rem 0 1rem 0;
   color: var(--primary-text-color);
-  font-size: 3rem;
-  text-align: center;
+  font-size: 1.5rem;
+  text-align: start;
 }
 
 /* buy it button */
@@ -156,7 +165,7 @@ html {
   border-radius: 7px;
   background: var(--primary-text-color);
   color: var(--bg-color);
-  font-size: 2rem;
+  font-size: 1.75rem;
   text-decoration: none;
 }
 
@@ -165,7 +174,7 @@ html {
 .summary {
   margin: 2rem;
   padding: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--primary-text-color);
   text-align: center;
 }
@@ -180,14 +189,14 @@ html {
 .section-label {
   margin: 1rem;
   color: var(--primary-text-color);
-  font-size: 2.5rem;
+  font-size: 1.75rem;
 }
 
 .author-text {
   margin: 1rem;
   color: var(--primary-text-color);
-  font-size: 2rem;
-  text-align: center;
+  font-size: 1.2rem;
+  text-align: start;
 }
 
 /* favorite ideas */
@@ -206,7 +215,8 @@ html {
 .ideas li {
   margin: 0 0 2rem 0;
   color: var(--primary-text-color);
-  font-size: 2rem;
+  line-height: 2rem;
+  font-size: 1.2rem;
 }
 
 .ideas ul {
@@ -238,8 +248,9 @@ html {
   border-radius: 7px;
   background: var(--primary-text-color);
   color: var(--bg-color);
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-decoration: none;
+  text-align: center;
 }
 
 /* another buy it button */
@@ -252,6 +263,6 @@ html {
 
 .end-text {
   color: var(--primary-text-color);
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
 }
