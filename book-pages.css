@@ -1,11 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Roboto:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Infant&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Pompiere&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap");
 
 * {
-  font-family: "Kantumruy Pro";
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,7 +10,9 @@
 :root {
   --bg-color: #242526;
   --primary-text-color: #add8e6;
-  --primary-font: "Kantumruy Pro";
+  --h1-font: "Fira Sans";
+  --h2-font: "Cormorant Garamond";
+  --body-font: "Fira Sans";
 }
 
 html {
@@ -79,7 +77,7 @@ html {
   align-items: flex-start;
   background-color: var(--primary-text-color);
   color: var(--bg-color);
-  font-family: var(--primary-font);
+  font-family: var(--h1-font);
   text-decoration: none;
   hyphens: manual;
 }
@@ -116,6 +114,8 @@ html {
   display: inline;
   color: var(--primary-text-color);
   font-size: 1.5rem;
+  font-family: var(--h2-font);
+  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -124,31 +124,32 @@ html {
 .book-view-tile {
   display: flex;
   flex-flow: column nowrap;
-  align-items: flex-start;
+  align-items: left;
 }
 
 .book-view-title {
   margin: 1rem 0 0 0;
   color: var(--primary-text-color);
   font-size: 3.5rem;
-  font-family: var(--primary-font);
-  text-align: start;
+  font-family: var(--h1-font);
+  text-align: left;
 }
 
 .book-view-tagline {
   margin: 1.5rem 0 0 0;
   flex-grow: 90%;
   color: var(--primary-text-color);
-  font-size: 2.5rem;
-  font-family: var(--primary-font);
-  text-align: start;
+  font-size: 2rem;
+  font-family: var(--h2-font);
+  text-align: left;
 }
 
 .book-view-author {
   margin: 2rem 0 1rem 0;
   color: var(--primary-text-color);
   font-size: 1.5rem;
-  text-align: start;
+  font-family: var(--h2-font);
+  text-align: left;
 }
 
 /* buy it button */
@@ -190,12 +191,14 @@ html {
   margin: 1rem;
   color: var(--primary-text-color);
   font-size: 1.75rem;
+  font-family: var(--h2-font);
 }
 
 .author-text {
   margin: 1rem;
   color: var(--primary-text-color);
   font-size: 1.2rem;
+  font-family: var(--body-font);
   text-align: start;
 }
 
@@ -217,6 +220,7 @@ html {
   color: var(--primary-text-color);
   line-height: 2rem;
   font-size: 1.2rem;
+  font-family: var(--body-font);
 }
 
 .ideas ul {
@@ -249,6 +253,7 @@ html {
   background: var(--primary-text-color);
   color: var(--bg-color);
   font-size: 1.5rem;
+  font-family: var(--body-font);
   text-decoration: none;
   text-align: center;
 }
@@ -259,6 +264,7 @@ html {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  font-family: var(--body-font);
 }
 
 .end-text {
