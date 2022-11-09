@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 * {
   margin: 0;
@@ -8,11 +8,17 @@
 }
 
 :root {
-  --bg-color: #242526;
-  --primary-text-color: #add8e6;
-  --h1-font: "Fira Sans";
-  --h2-font: "Cormorant Garamond";
-  --body-font: "Fira Sans";
+  /*colors*/
+  --bg-color: #18191a;
+  --site-title-color: #fcfcfe;
+  --book-tile-color: #242526;
+  --book-tile-text-color: #fcfcfe;
+  --book-text-color: #ffffff;
+  /*fonts*/
+  --site-title-font: "Roboto";
+  --book-title-font: "Roboto Slab";
+  --book-author-font: "Roboto";
+  --body-font: "Roboto";
 }
 
 html {
@@ -29,7 +35,9 @@ html {
 
 .site-title {
   margin: 1rem;
-  color: var(--primary-text-color);
+  color: var(--site-title-color);
+  font-family: var(--site-title-font);
+  font-weight: 100;
   font-size: 5rem;
   text-align: center;
 }
@@ -37,58 +45,51 @@ html {
 .shelf {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+  align-items: center;
   width: 100%;
 }
 
-.shelf-label {
-  margin: 1.5rem;
-  color: var(--primary-text-color);
-  font-size: 4rem;
-  text-align: center;
-}
 
 @media screen and (max-width: 600px) {
   .site-title {
-    font-size: 4rem;
-  }
-
-  .shelf-label {
     font-size: 3rem;
   }
+
 }
 
 .shelf-books {
   display: flex;
-  flex: wrap;
+  flex-flow: row wrap;
   justify-content: center;
+  width: 80%;
 }
 
 .book-tile {
-  width: 15rem;
-  height: 15rem;
+  width: 250px;
+  height: 200px;
   margin: 1.5rem;
   padding: 1rem;
-  border: 3px solid var(--primary-text-color);
   border-radius: 7px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
-  background-color: var(--primary-text-color);
-  color: var(--bg-color);
-  font-family: var(--h1-font);
   text-decoration: none;
   hyphens: manual;
+  background-color: var(--book-tile-color);
 }
 
 .book-tile-title {
+  color: var(--book-tile-text-color);
   font-size: 2rem;
-  margin-bottom: 0.5rem;
+  font-family: var(--book-title-font);
 }
 
 .book-tile-author {
+  color: var(--book-tile-text-color);
   font-size: 1.25rem;
+  font-family: var(--book-author-font);
+  font-weight: 100;
 }
 
 /* BOOK PAGE */
@@ -112,9 +113,9 @@ html {
 
 .back-to-shelf {
   display: inline;
-  color: var(--primary-text-color);
+  color: var(--book-text-color);
   font-size: 1.5rem;
-  font-family: var(--h2-font);
+  font-family: var(--site-title-font);
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -129,26 +130,27 @@ html {
 
 .book-view-title {
   margin: 1rem 0 0 0;
-  color: var(--primary-text-color);
+  color: var(--book-text-color);
   font-size: 3.5rem;
-  font-family: var(--h1-font);
+  font-family: var(--book-title-font);
   text-align: left;
 }
 
 .book-view-tagline {
   margin: 1.5rem 0 0 0;
   flex-grow: 90%;
-  color: var(--primary-text-color);
+  color: var(--book-text-color);
   font-size: 2rem;
-  font-family: var(--h2-font);
+  font-family: var(--book-author-font);
+  font-weight: 100;
   text-align: left;
 }
 
 .book-view-author {
   margin: 2rem 0 1rem 0;
-  color: var(--primary-text-color);
+  color: var(--book-text-color);
   font-size: 1.5rem;
-  font-family: var(--h2-font);
+  font-family: var(--book-author-font);
   text-align: left;
 }
 
@@ -162,11 +164,11 @@ html {
 .buy-it-button {
   margin: 2rem;
   padding: 0.75rem;
-  border: 1px solid var(--primary-text-color);
   border-radius: 7px;
-  background: var(--primary-text-color);
-  color: var(--bg-color);
+  background: var(--book-tile-color);
+  color: var(--book-text-color);
   font-size: 1.75rem;
+  font-family: var(--site-title-font);
   text-decoration: none;
 }
 
@@ -176,7 +178,7 @@ html {
   margin: 2rem;
   padding: 0;
   font-size: 1.5rem;
-  color: var(--primary-text-color);
+  color: var(--book-text-color);
   text-align: center;
 }
 
@@ -189,16 +191,18 @@ html {
 
 .section-label {
   margin: 1rem;
-  color: var(--primary-text-color);
+  color: var(--book-text-color);
   font-size: 1.75rem;
-  font-family: var(--h2-font);
+  font-family: var(--book-author-font);
+  font-weight: 100;
 }
 
 .author-text {
   margin: 1rem;
-  color: var(--primary-text-color);
+  color: var(--book-text-color);
   font-size: 1.2rem;
   font-family: var(--body-font);
+  font-weight: 300;
   text-align: start;
 }
 
@@ -217,10 +221,11 @@ html {
 
 .ideas li {
   margin: 0 0 2rem 0;
-  color: var(--primary-text-color);
+  color: var(--book-text-color);
   line-height: 2rem;
   font-size: 1.2rem;
   font-family: var(--body-font);
+  font-weight: 300px;
 }
 
 .ideas ul {
@@ -248,12 +253,13 @@ html {
 .explore-link {
   padding: 0.5rem;
   margin: 1rem;
-  border: 1px solid var(--primary-text-color);
+  border: 1px solid var(--book-tile-color);
   border-radius: 7px;
-  background: var(--primary-text-color);
-  color: var(--bg-color);
+  background: var(--book-tile-color);
+  color: var(--book-text-color);
   font-size: 1.5rem;
   font-family: var(--body-font);
+  font-weight: 300;
   text-decoration: none;
   text-align: center;
 }
@@ -268,7 +274,7 @@ html {
 }
 
 .end-text {
-  color: var(--primary-text-color);
+  color: var(--book-text-color);
   font-size: 1.5rem;
   text-align: center;
 }
