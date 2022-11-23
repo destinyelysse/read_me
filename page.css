@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
 
 * {
     margin: 0;
@@ -10,13 +11,13 @@
 :root {
     /*colors*/
     --bg-color: #18191a;
-    --accent-color: #fcfcfe;
+    --accent-color:#b0b3b8;
     --supporting-color: #242526;
 
     /*fonts*/
-    --heading-font: "Roboto";
+    --heading-font: "Poppins";
     --supporting-font: "Roboto Slab";
-    --body-font: "Roboto";
+    --body-font: "Poppins";
 }
 
 html {
@@ -27,6 +28,8 @@ html {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-areas: "home home header header header header header"
+    "aside aside header header header header header"
+    "aside aside article article article article article"
     "aside aside article article article article article";
 }
 
@@ -50,19 +53,20 @@ html {
 }
 
 .home-link {
-    margin: .75rem;
-    font-size: 5rem;
+    margin: 1rem;
+    font-size: 4.8rem;
     font-family: var(--heading-font);
     font-weight: 100;
     color: var(--accent-color);
     text-decoration: none;
+    text-align: center;
 }
 
 /* header */
 
 .book-view-header {
-    margin: 1rem;
-    padding: .5rem;
+    margin: 2rem;
+    padding: 1rem;
     border-radius: 7px;
     background: var(--supporting-color);
     color: var(--accent-color);
@@ -101,7 +105,7 @@ aside {
     display: flex;
     flex-flow: column nowrap;
     grid-area: aside;
-    max-width: 90%;
+    align-items: center;
 }
 
 /* buy it*/
@@ -123,7 +127,10 @@ aside {
 
 /* about the author */
 .section-author {
-    margin: 2rem;
+    margin: 2rem 1rem 0 1rem;
+    border-radius: 7px;
+    background: var(--supporting-color);
+    padding: 1rem;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -133,7 +140,7 @@ aside {
     padding: .75rem;
     color: var(--accent-color);
     font-family: var(--body-font);
-    font-weight: 100;
+    font-weight: 300;
     font-size: 2rem;
     text-align: center;
 }
@@ -143,16 +150,15 @@ aside {
     max-width: 60ch;
     font-size: 1.5rem;
     font-family: var(--body-font);
-    font-weight: 300;
+    font-weight: 100;
     color: var(--accent-color);
-    text-align: start;
+    text-align: center;
     overflow-y: scroll;
 }
 
 /* article */
 
 article {
-    padding: .5rem;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -162,8 +168,8 @@ article {
 }
 
 blockquote {
-    margin: 1rem;
     padding: .5rem 2rem;
+    margin: 2rem;
     font-family: var(--heading-font);
     font-size: 2rem;
     color: var(--accent-color);
@@ -171,6 +177,10 @@ blockquote {
 }
 
 .section-favorite-ideas {
+    border-radius: 7px;
+    background: var(--supporting-color);
+    margin: 1rem 2rem;
+    padding: 1rem;
     display: flex;
     flex-flow: column nowrap;
     align-items: left;
@@ -180,7 +190,7 @@ blockquote {
     padding: .75rem;
     color: var(--accent-color);
     font-family: var(--body-font);
-    font-weight: 100;
+    font-weight: 300;
     font-size: 2rem;
 }
 
@@ -193,9 +203,10 @@ blockquote {
     color: var(--accent-color);
     font-size: 1.5rem;
     font-family: var(--body-font);
-    font-weight: 300px;
+    font-weight: 100;
     line-height: 1.5;
-    max-width: 60ch;
+    letter-spacing: 1px;
+    max-width: 70ch;
 }
 
 /* explore more */

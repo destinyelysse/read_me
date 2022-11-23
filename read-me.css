@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
 
 * {
   margin: 0;
@@ -10,13 +10,13 @@
 :root {
   /*colors*/
   --bg-color: #18191a;
-  --accent-color: #fcfcfe;
+  --accent-color: rgba(255, 255, 255, 0.6);
   --supporting-color: #242526;
 
   /*fonts*/
-  --heading-font: "Roboto";
+  --heading-font: "Poppins";
   --supporting-font: "Roboto Slab";
-  --body-font: "Roboto";
+  --body-font: "Poppins";
 }
 
 html {
@@ -25,14 +25,13 @@ html {
 
 /* HOME PAGE */
 .home-header {
-  padding-top: 2rem;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
 
 .site-title {
-  margin: 1rem;
+  margin: .5rem;
   color: var(--accent-color);
   font-family: var(--heading-font);
   font-weight: 100;
